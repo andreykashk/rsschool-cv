@@ -50,7 +50,8 @@ function revrot(str, sz) {
 ## Education and courses:
 1. The Complete JavaScript Course - Udemy
 2. YouTube courses
-3. JavaScript Manual on [learnjavascript.ru](https://learn.javascript.ru/)
+3. JavaScript Manual on <https://learn.javascript.ru>  
+
 
 ## Languages
 * Russian - native
