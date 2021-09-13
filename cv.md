@@ -47,13 +47,14 @@ function revrot(str, sz) {
   return chunks.join('');
 }
 ```
+
 ## Education and courses:
 1. The Complete JavaScript Course - Udemy
-2. YouTube courses
-3. JavaScript Manual on <https://learn.javascript.ru>  
+1. YouTube courses
+1. JavaScript Manual on <https://learn.javascript.ru>  
 
 
-## Languages
+## Languages:
 * Russian - native
 * Ukrainian - Intermediate
 * English - level A1
