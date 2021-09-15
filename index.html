@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrey_Ka CV RSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="center">
+    <header>
+      <div class="header-photo">
+        <img src="image/photo.jpg" alt="foto Andrey_Ka" class="photo">
+      </div>
+      <div class="header-content">
+        <h1>Andrey Kashkovskii</h1>
+        <h2>front-end developer</h2>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="section section-left">
+          <h3>
+            About Me
+          </h3>
+        </div>
+        <div class="section section-right">
+          <p>
+            Recently interested in automating browser actions and after several successful and simple projects, I realized that without JS, nowhere
+          </p>
+        </div>
+
+      </section>
+      <section class="container">
+        <div class="section section-left">
+          <h3>Contact</h3>
+        </div>
+        <div class="section section-right">
+          <p>Phone: +380675720155</p>
+        <p>Telegram: @AndreyKashk</p>
+        <p>Email: andreykashk@gmail.com</p>
+        <address>Ukraina, Kharkiv</address>
+        </div>
+      </section>
+      <section class="container">
+        <div class="section section-left">
+          <h3>Professional Skills</h3>
+        </div>
+        <div class="section section-right">
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript Basic</li>
+            <li>Xpath</li>
+            <li>BAS</li>
+          </ul>
+        </div>
+      </section>
+      <section class="container">
+        <div class="section section-left">
+          <h3>Code examples:</h3>
+        </div>
+        <div class="section section-right">
+          <pre>
+            <code>
+              function revrot(str, sz) {
+                if (sz <= 0 || str === '' || str.length < sz) {
+                return ''
+              }
+            
+              const reg = new RegExp(`.{1,${sz}}`, 'g');  
+              let chunks = str.match(reg);
+            
+              chunks = chunks.map(function(item){
+                if (item.length < sz) {
+                  return ''
+                };
+                let sum = 0;
+            
+                for (let i = 0; i < item.length; i++) {
+                  sum = Math.pow(item[i], 3) + sum;
+                };
+                let arr;
+                if (Number.isInteger(sum/2)) {
+                  arr = item.split('').reverse().join('');
+                  return arr;
+                } else {
+                  arr = item.split('');
+                  let res = arr.shift();
+                  arr.push(res);
+                  return arr.join('');
+                };
+              })
+              
+              return chunks.join('');
+            }
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section class="container">
+        <div class="section section-left">
+          <h3>Languages:</h3>
+        </div>
+        <div class="section section-right">
+          <ul>
+            <li>Russian - native</li>
+            <li>Ukrainian - Intermediate</li>
+            <li>English - level A1</li>
+          </ul>
+        </div>
+        
+      </section>
+
+    </main>
+    <footer class="footer-container">
+      <div class="footer footer-git">
+        <a href="https://github.com/andreykashk" target="_blank">
+          <img src="image/github.svg" alt="github_logo" class="footer-git">
+        </a>
+      </div>
+      <div class="footer footer-rs">
+        <a href="https://rs.school/js/" target="_blank">
+          <img src="image/rs_school_js.svg" alt="rs_scool_logo">
+        </a>
+      </div>
+      <p class="footer">2021</p>
+    </footer>
+
+  </div>
+</body>
+</html>
