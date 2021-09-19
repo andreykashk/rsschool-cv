@@ -4,8 +4,46 @@ body {
 
 .center {
   margin: 0 auto;
-  width: 80%;
+  max-width: 1200px;
+  padding: 0 15px;
 }
+
+@media (max-width:1200px) {
+  .center{
+    max-width: 970px;
+  }
+}
+
+@media (max-width:992px) {
+  .center{
+    max-width: 750px;
+  }
+}
+
+@media (max-width:767px) {
+  .center{
+    max-width: none;
+    font-size: 70%;
+  }
+  .section.section-left{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header .header-content {
+    padding-left: 0;
+  }
+
+  .section.section-right {
+    padding-left: 10px;
+  }
+
+  code {
+    font-size: 80%;
+  }
+}
+
+
 
 header {
   background-color: #41688f;
@@ -36,6 +74,7 @@ header {
 .header-content {
   display: inline-block;
   box-sizing: border-box;
+  width: 67%;
   margin-left: 10px;
   padding-left: 30px;
   color: #f3f5f8;
@@ -65,16 +104,22 @@ header {
   padding-right: 30px;
   padding-left: 10px;
   text-align: end;
-  font-size: 1.4em;
 }
 
 .section-right {
+  width: 70%;
   padding-right: 10px;
   padding-left: 30px;
   text-align: left;
   margin-left: 30%;
-
 }
+
+code {
+  position: relative;
+  left: -40px;
+  text-align: right;
+}
+
 .footer-container {
   box-sizing: border-box;
   background-color: #41688f;
