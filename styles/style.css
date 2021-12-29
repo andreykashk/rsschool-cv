@@ -1,5 +1,7 @@
 @import url("./header.css");
 @import url("./section.css");
+@import url("./footer.css");
+@import url("./media.css");
 
 html {
   scroll-behavior: smooth;
@@ -22,76 +24,7 @@ body {
   max-width: 1440px;
 }
 
-
-
-@media (max-width:1200px) {
-  .container{
-    max-width: 970px;
-  }
-}
-
-@media (max-width:992px) {
-  .container{
-    max-width: 750px;
-  }
-}
-
-@media (max-width:767px) {
-  .container{
-    max-width: none;
-    font-size: 70%;
-  }
-  .section.section-left{
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .nav-link {
-    padding: 10px;
-  }
-
-  .nav-list {
-    padding: 0;
-  }
-
-  .section.section-right {
-    padding-left: 10px;
-  }
-
-  code {
-    font-size: 80%;
-  }
-}
-
 code {
   position: relative;
-  left: -40px;
   text-align: right;
-}
-
-.footer-container {
-  box-sizing: border-box;
-  background-color: #41688f;
-  text-align: end;
-}
-
-.footer {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-footer p {
-  font-size: 20px;
-  color: #f3f5f8;
-}
-
-.footer-git {
-  width: 30px;
-}
-
-.footer-rs {
-  width: 100px;
 }

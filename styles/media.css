@@ -1,0 +1,39 @@
+
+@media (max-width:1200px) {
+  .container{
+    max-width: 970px;
+  }
+}
+
+@media (max-width:992px) {
+  .container{
+    max-width: 750px;
+  }
+}
+
+@media (max-width:767px) {
+  .container{
+    max-width: none;
+    font-size: 70%;
+  }
+  .section.section-left{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-link {
+    padding: 10px;
+  }
+
+  .nav-list {
+    padding: 0;
+  }
+
+  .section.section-right {
+    padding-left: 10px;
+  }
+
+  code {
+    font-size: 80%;
+  }
+}

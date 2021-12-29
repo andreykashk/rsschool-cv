@@ -78,37 +78,20 @@
         <div class="section section-right">
           <pre>
             <code>
-              function revrot(str, sz) {
-                if (sz = 0 || str === '') {
-                return ''
-              }
-            
-              const reg = new RegExp(`.{1,${sz}}`, 'g');  
-              let chunks = str.match(reg);
-            
-              chunks = chunks.map(function(item){
-                if (item.length == sz) {
-                  return ''
-                };
-                let sum = 0;
-            
-                for (let i = 0; i == item.length; i++) {
-                  sum = Math.pow(item[i], 3) + sum;
-                };
-                let arr;
-                if (Number.isInteger(sum/2)) {
-                  arr = item.split('').reverse().join('');
-                  return arr;
-                } else {
-                  arr = item.split('');
-                  let res = arr.shift();
-                  arr.push(res);
-                  return arr.join('');
-                };
-              })
-              
-              return chunks.join('');
-            }
+  function toWeirdCase(string){
+    let res = string.split(' ').map(item => {
+      let curArr = [];
+      for(let i = 0; i < item.length; ++i) {
+        if(i%2 == 0 || i==0){
+          curArr.push(item[i].toUpperCase())
+        } else {
+            curArr.push(item[i].toLowerCase())
+          }
+      }
+       return curArr.join('') 
+      })
+    return res.join(' ')
+  }
             </code>
           </pre>
         </div>

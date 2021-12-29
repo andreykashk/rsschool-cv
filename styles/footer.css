@@ -1,0 +1,22 @@
+.footer-container {
+  background-color: #41688f;
+  text-align: end;
+}
+
+.footer {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #f3f5f8;
+}
+
+.footer-git {
+  width: 30px;
+}
+
+.footer-rs {
+  width: 100px;
+}
