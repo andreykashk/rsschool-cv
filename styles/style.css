@@ -24,6 +24,10 @@ body {
   max-width: 1440px;
 }
 
+ul {
+  margin: 0;
+}
+
 code {
   position: relative;
   text-align: right;
