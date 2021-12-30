@@ -6,51 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width">
   <title>Andrey_Ka CV RSS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="reset.css"> -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <div class="center">
-    <header>
-      <div class="header-photo">
-        <img src="image/photo.jpg" alt="foto Andrey_Ka" class="photo">
-      </div>
+  <div class="container">
+    <header class="header">
       <div class="header-content">
-        <h1>Andrey Kashkovskii</h1>
-        <h2>front-end developer</h2>
+        <div class="header-content-photo">
+          <img src="image/photo.jpg" alt="foto Andrey_Ka" class="photo">
+        </div>
+        <div class="header-content-name">
+          <h1>Andrey Kashkovskii</h1>
+          <h2>front-end developer</h2>
+        </div>
       </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about_me" class="nav-link">About Me</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+          <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section class="container">
-        <div class="section section-left">
-          <h3>
+    <main class="main">
+      <section class="section-container">
+        <div class="section-left">
+          <h3 id="about_me">
             About Me
           </h3>
         </div>
-        <div class="section section-right">
+        <div class="section-right">
           <p>
             Recently interested in automating browser actions and after several successful and simple projects, I realized that without JS, nowhere
           </p>
         </div>
 
       </section>
-      <section class="container">
-        <div class="section section-left">
-          <h3>Contact</h3>
+      <section class="section-container">
+        <div class="section-left">
+          <h3 id="contact">Contact</h3>
         </div>
-        <div class="section section-right">
+        <div class="section-right">
           <p>Phone: +380675720155</p>
         <p>Telegram: @AndreyKashk</p>
         <p>Email: andreykashk@gmail.com</p>
         <address>Ukraina, Kharkiv</address>
         </div>
       </section>
-      <section class="container">
-        <div class="section section-left">
-          <h3>Professional Skills</h3>
+      <section class="section-container">
+        <div class="section-left">
+          <h3 id="skills">Professional Skills</h3>
         </div>
-        <div class="section section-right">
+        <div class="section-right">
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -60,53 +72,36 @@
           </ul>
         </div>
       </section>
-      <section class="container">
-        <div class="section section-left">
-          <h3>Code examples:</h3>
+      <section class="section-container">
+        <div class="section-left">
+          <h3 id="code">Code examples:</h3>
         </div>
-        <div class="section section-right">
+        <div class="section-right">
           <pre>
             <code>
-              function revrot(str, sz) {
-                if (sz = 0 || str === '') {
-                return ''
-              }
-            
-              const reg = new RegExp(`.{1,${sz}}`, 'g');  
-              let chunks = str.match(reg);
-            
-              chunks = chunks.map(function(item){
-                if (item.length == sz) {
-                  return ''
-                };
-                let sum = 0;
-            
-                for (let i = 0; i == item.length; i++) {
-                  sum = Math.pow(item[i], 3) + sum;
-                };
-                let arr;
-                if (Number.isInteger(sum/2)) {
-                  arr = item.split('').reverse().join('');
-                  return arr;
-                } else {
-                  arr = item.split('');
-                  let res = arr.shift();
-                  arr.push(res);
-                  return arr.join('');
-                };
-              })
-              
-              return chunks.join('');
-            }
+  function toWeirdCase(string){
+    let res = string.split(' ').map(item => {
+      let curArr = [];
+      for(let i = 0; i < item.length; ++i) {
+        if(i%2 == 0 || i==0){
+          curArr.push(item[i].toUpperCase())
+        } else {
+            curArr.push(item[i].toLowerCase())
+          }
+      }
+       return curArr.join('') 
+      })
+    return res.join(' ')
+  }
             </code>
           </pre>
         </div>
       </section>
-      <section class="container">
-        <div class="section section-left">
-          <h3>Languages:</h3>
+      <section class="section-container">
+        <div class="section-left">
+          <h3 id="languages">Languages:</h3>
         </div>
-        <div class="section section-right">
+        <div class="section-right">
           <ul>
             <li>Russian - native</li>
             <li>Ukrainian - Intermediate</li>
@@ -132,6 +127,10 @@
     </footer>
 
   </div>
-  <script>console.log("Самооценка CV : 120/150")</script>
+  <!-- Back to top button -->
+<a id="button_up"></a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script src="./src/button_up.js"></script> 
+<script>console.log("Самооценка CV : 115/120")</script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  display: flex;
+}
+
+.section-left {
+  width: 31%;
+  padding-right: 30px;
+  padding-top: 20px;
+  text-align: right;
+  background-color: #f3f5f8;
+  color: #41688f;
+
+} 
+
+.section-right {
+  width: 69%;
+  padding: 20px;
+}
